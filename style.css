@@ -18,8 +18,9 @@
   --Tomato: hsl(4, 100%, 67%);
   --Dark-Slate-Grey: hsl(234, 29%, 20%);
   --Charcoal-Grey: hsl(235, 18%, 26%);
-  --Grey: hsl(231, 7%, 60%);
   --White: hsl(0, 0%, 100%);
+  --Border: hsla(243, 28%, 13%, 0.25);
+  --Link: hsl(228, 45%, 44%);
 }
 
 body {
@@ -47,7 +48,8 @@ body {
 /* Text Section */
 
 .text-section-container {
-  display: block; /* switch to none*/
+  display: flex; /* switch to none*/
+  flex-direction: column;
   margin: 40px 24px 0 24px;
 }
 
@@ -88,7 +90,7 @@ body {
 /* Sign-up form section */
 
 .sign-up-form-section {
-  margin-bottom: 40px;
+  margin: 0 auto 40px auto;
 }
 
 .sign-up-form {
@@ -107,13 +109,12 @@ body {
 .form-input {
   width: 327px;
   height: 56px;
-  border: 1px solid rgba(25, 24, 43, 0.25);
+  border: 1px solid var(--Border);
   border-radius: 8px;
   margin-bottom: 24px;
   padding-left: 24px;
   font-size: 16px;
-  line-height: 1.5;
-  color: #242742;
+  color: var(--Border);
   opacity: 0.5;
 }
 
@@ -131,9 +132,10 @@ body {
 /* Success message section */
 
 .success-message-section {
-  display: none; /* switch to block*/
+  display: none; /* switch to flex*/
+  flex-direction: column;
   width: 87.2vw;
-  height: 76.72vh;
+  height: 812px;
   margin: 0 24px;
   padding-top: 149px;
 }
@@ -162,6 +164,7 @@ body {
 }
 
 .dismiss-button {
+  margin: 0 auto 0 auto;
   width: 327px;
   height: 56px;
   background: var(--Dark-Slate-Grey);
@@ -180,5 +183,91 @@ body {
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--Link);
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    display: flex;
+    align-items: center;
+    background-color: var(--Charcoal-Grey);
+    padding-top: 219px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 928px;
+    height: 641px;
+    background-color: var(--White);
+    border-radius: 36px;
+    padding: 24px 24px 24px 64px;
+  }
+
+  /* Background image section */
+
+  .background-image-container {
+    display: block; /* switch to none*/
+    width: 100vw;
+    height: unset;
+  }
+
+  /* Text Section */
+
+  .text-section-container {
+    display: flex; /* switch to none*/
+    flex-direction: column;
+    margin: 73px 64px 0 0;
+  }
+
+  .header-text {
+    font-family: "Roboto-Bold";
+    font-size: 56px;
+    margin-bottom: 24px;
+  }
+
+  /* List items section */
+
+  .list-items-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  /* Sign-up form section */
+
+  .sign-up-form-section {
+    width: 376px;
+  }
+
+  .form-input {
+    width: 100%;
+  }
+
+  .form-input:hover {
+    cursor: pointer;
+    border: 1px solid var(--Dark-Slate-Grey);
+    color: var(--Dark-Slate-Grey);
+    opacity: unset;
+  }
+
+  .form-button {
+    width: 100%;
+  }
+
+  .form-button:hover {
+    cursor: pointer;
+    background-color: var(--Tomato);
+  }
+
+  /* Footer section */
+
+  .attribution {
+    color: var(--White);
+  }
+
+  .attribution a {
+    color: var(--Tomato);
+  }
 }
