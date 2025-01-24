@@ -98,7 +98,8 @@ body {
   flex-direction: column;
 }
 
-.form-label {
+.form-label,
+.invalid-form-label {
   font-family: "Roboto-Bold";
   font-size: 12px;
   line-height: 1.5;
@@ -189,9 +190,9 @@ body {
 @media only screen and (min-width: 1440px) {
   body {
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: var(--Charcoal-Grey);
-    padding-top: 219px;
   }
 
   main {
@@ -210,6 +211,10 @@ body {
     display: block; /* switch to none*/
     width: 100vw;
     height: unset;
+  }
+
+  .background-image {
+    border-radius: 16px;
   }
 
   /* Text Section */
@@ -239,6 +244,16 @@ body {
 
   .sign-up-form-section {
     width: 376px;
+  }
+
+  .label-group {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .invalid-form-label {
+    display: none;
+    color: var(--Tomato);
   }
 
   .form-input {
