@@ -16,7 +16,7 @@
   </head>
   <body>
     <!-- Main section -->
-    <main>
+    <main id="main">
       <!-- Background image -->
       <picture
         class="background-image-container"
@@ -70,17 +70,18 @@
         </div>
         <!-- Sign-up form section -->
         <div class="sign-up-form-section">
-          <form class="sign-up-form">
+          <form class="sign-up-form" id="sign-up-form">
             <div class="label-group">
               <label class="form-label" for="email">Email address</label>
-              <label class="invalid-form-label" for="email"
-                >Valid email required</label
-              >
+              <div class="invalid-form-label" id="invalid-form-label">
+                Valid email required
+              </div>
             </div>
             <input
               class="form-input"
               id="email"
-              type="email"
+              type="text"
+              name="email"
               placeholder="email@company.com"
             />
             <button class="form-button" id="form-button" type="submit">
