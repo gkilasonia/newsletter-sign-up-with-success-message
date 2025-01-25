@@ -107,6 +107,10 @@ body {
   margin-bottom: 8px;
 }
 
+.invalid-form-label {
+  display: none;
+}
+
 .form-input {
   width: 327px;
   height: 56px;
